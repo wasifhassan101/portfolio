@@ -5,7 +5,7 @@ import threads from "../public/threads.svg"
 import gh from "../public/github.svg"
 import ig from "../public/instagram.svg"
 import Link from 'next/link'
-
+// 
 export default function Home() {
   return (
     <main className='bg-black'>
