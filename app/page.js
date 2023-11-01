@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <main className='bg-black'>
       <div className='relative h-full flex flex-col p-10'>
-        <h1 className='text-yellow text-5xl mt-20 font-roboto w-1/3'>
+        <h1 className='text-yellow md:text-5xl sm:text-xl mt-20 font-roboto md:w-1/3 sm:w-full'>
           Wasif Hassan — Software Developer
         </h1>
-        <div className='w-full flex'>
-          <div className={`flex w-1/3 translate-y-10 left-10 items-center justify-center`}>
+        <div className='w-full flex md:flex-row sm:flex-col'>
+          <div className={`flex md:w-1/3 translate-y-10 left-10 items-center justify-center`}>
             <Image className={`${styles.imageAnimate}`} src={wasif} />
           </div>
-          <p className='w-2/3 p-12 font-roboto-light text-white text-lg'>
+          <p className='md:w-2/3 sm:w-full md:p-12 sm:pt-12 font-roboto-light text-white md:text-lg sm:text-xs'>
             Hi, I'm Wasif. I'm a software developer with a unique blend of expertise in law and technology.
             While I began my career as a law student, my passion for coding led me to found LawScript, a startup that
             leverages AI to revolutionize legal research and writing in Pakistan. This venture serves as a testament to
@@ -37,15 +37,15 @@ export default function Home() {
           </p>
         </div>
       </div >
-      <div className='flex items-center flex-col bg-light-gray p-32 space-y-10'>
-        <h1 className='text-black text-4xl font-roboto-light'>
+      <div className='flex items-center flex-col bg-light-gray md:p-32 sm:p-8 space-y-10'>
+        <h1 className='text-black md:text-4xl sm:text-xl font-roboto-light'>
           <span className='font-roboto'>LawScript</span> — revolutionizing the legal landscape with AI-driven research and writing tools
           that blend efficiency, innovation, and precision.
         </h1>
-        <div className='w-4/5'>
+        <div className='md:w-4/5 sm:w-full'>
           <Image className='rounded-2xl' src={ls} />
         </div>
-        <p className='font-roboto-light text-black text-lg text-justify'>
+        <p className='font-roboto-light text-black md:text-lg sm:text-xs text-justify'>
           As the CTO and co-founder of LawScript, I led the technical development of the platform
           from its inception on March 15 to its successful launch on September 11. Within this period,
           I faced and overcame a myriad of technical challenges, including the rapid development of the
@@ -58,9 +58,9 @@ export default function Home() {
           to building a team to further enhance and scale our platform.
         </p>
       </div>
-      <div className='bg-black p-20 flex items-center'>
-        <div className='w-1/2'>
-          <h1 className='text-yellow text-3xl font-roboto'>Let's Connect!</h1>
+      <div className='bg-black md:py-10 md:px-20 sm:p-10 flex items-center md:space-x-0 sm:space-x-10'>
+        <div className='w-1/2 h-full'>
+          <h1 className='text-yellow md:text-3xl sm:text-xl font-roboto'>Let's Connect!</h1>
           <div className='flex items-center h-20'>
             <Link target='_blank' href="https://github.com/wasifhassan101">
               <div className='w-12'>
@@ -79,13 +79,15 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className='w-1/2 flex flex-col space-y-6'>
-          <h1 className='text-yellow font-roboto text-3xl'>Want to hire?</h1>
+        <div className='w-1/2 flex flex-col'>
+          <h1 className='text-yellow font-roboto md:text-3xl sm:text-xl'>Want to hire?</h1>
+          <div className='h-20 flex items-center'>
           <a href='mailto:wasifhassan101@gmail.com' >
             <button className='bg-white py-2 px-3 text-black font-roboto hover:bg-gray-500 rounded-full'>
               Send Email
             </button>
           </a>
+          </div>
         </div>
       </div>
     </main >

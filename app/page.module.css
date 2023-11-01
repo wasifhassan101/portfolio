@@ -4,7 +4,7 @@
     /* transform: rotate(360deg); */
     /* position: absolute; */
 
-        border: 4px solid white;
+    border: 4px solid white;
     /* top:-10rem; */
     align-items: center;
     justify-content: center;
@@ -24,5 +24,26 @@
         transform: rotate(360deg);
         width: 100%;
         height: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .imageAnimate {
+        width: 10rem;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+            width: 0rem;
+            height: 0rem;
+            border: none;
+        }
+
+        100% {
+            transform: rotate(360deg);
+            width: 10rem;
+            height: 10rem;
+        }
     }
 }
