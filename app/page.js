@@ -5,7 +5,8 @@ import threads from "../public/threads.svg"
 import gh from "../public/github.svg"
 import ig from "../public/instagram.svg"
 import Link from 'next/link'
-// 
+import styles from './page.module.css'
+
 export default function Home() {
   return (
     <main className='bg-black'>
@@ -14,8 +15,8 @@ export default function Home() {
           Wasif Hassan — Software Developer
         </h1>
         <div className='w-full flex'>
-          <div className='w-1/3 translate-y-10 left-10'>
-            <Image src={wasif} />
+          <div className={`flex w-1/3 translate-y-10 left-10 items-center justify-center`}>
+            <Image className={`${styles.imageAnimate}`} src={wasif} />
           </div>
           <p className='w-2/3 p-12 font-roboto-light text-white text-lg'>
             Hi, I'm Wasif. I'm a software developer with a unique blend of expertise in law and technology.
@@ -57,24 +58,34 @@ export default function Home() {
           to building a team to further enhance and scale our platform.
         </p>
       </div>
-      <div className='bg-black p-20'>
-        <h1 className='text-yellow text-3xl font-roboto'>Let's Connect!</h1>
-        <div className='flex items-center h-20'>
-          <Link target='_blank' href="https://github.com/wasifhassan101">
-            <div className='w-12'>
-              <Image src={gh} className='w-10 hover:w-12' />
-            </div>
-          </Link>
-          <Link target='_blank' href='https://www.threads.net/@wasif_codes'>
-            <div className='w-12'>
-              <Image src={threads} className='w-7 hover:w-9' />
-            </div>
-          </Link>
-          <Link target='_blank' href='https://instagram.com/wasif_codes?igshid=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr'>
-            <div className='w-12'>
-              <Image src={ig} className='w-7 hover:w-9' />
-            </div>
-          </Link>
+      <div className='bg-black p-20 flex items-center'>
+        <div className='w-1/2'>
+          <h1 className='text-yellow text-3xl font-roboto'>Let's Connect!</h1>
+          <div className='flex items-center h-20'>
+            <Link target='_blank' href="https://github.com/wasifhassan101">
+              <div className='w-12'>
+                <Image src={gh} className='w-10 hover:w-12' />
+              </div>
+            </Link>
+            <Link target='_blank' href='https://www.threads.net/@wasif_codes'>
+              <div className='w-12'>
+                <Image src={threads} className='w-7 hover:w-9' />
+              </div>
+            </Link>
+            <Link target='_blank' href='https://instagram.com/wasif_codes?igshid=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr'>
+              <div className='w-12'>
+                <Image src={ig} className='w-7 hover:w-9' />
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className='w-1/2 flex flex-col space-y-6'>
+          <h1 className='text-yellow font-roboto text-3xl'>Want to hire?</h1>
+          <a href='mailto:wasifhassan101@gmail.com' >
+            <button className='bg-white py-2 px-3 text-black font-roboto hover:bg-gray-500 rounded-full'>
+              Send Email
+            </button>
+          </a>
         </div>
       </div>
     </main >
